@@ -1,0 +1,45 @@
+body {
+    background-color: #a6dcef;
+}
+
+.parent {
+    grid-template-columns: 3;
+    grid-template-rows: 3;
+}
+
+.top-left {
+
+}
+
+.top-mid{
+
+}
+
+.top-right {
+
+}
+
+.mid-left {
+
+}
+
+.mid-mid {
+
+}
+
+.mid-right {
+
+}
+
+.bot-left {
+
+}
+
+.bot-mid {
+
+}
+
+.bot-right {
+
+    
+}
