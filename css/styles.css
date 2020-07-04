@@ -5,6 +5,7 @@ body {
 .parent {
     grid-template-columns: 3;
     grid-template-rows: 3;
+    display: grid;
 }
 
 .top-left {
@@ -41,5 +42,5 @@ body {
 
 .bot-right {
 
-    
+
 }
