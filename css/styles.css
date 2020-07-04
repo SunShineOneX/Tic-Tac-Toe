@@ -2,45 +2,77 @@ body {
     background-color: #a6dcef;
 }
 
-.parent {
-    grid-template-columns: 3;
-    grid-template-rows: 3;
+.game-logo {
+    text-align: center;
+}
+
+.parent-grid {
     display: grid;
+    border: #ffe0ac 5rem;
+    padding-bottom: 5%;
+    width: 100vh;
+    height: 75vh;
+    margin-left: 40vh;
+    grid-row-gap: 1vh;
+    grid-column-gap: 1vh;
+    grid-template-areas:
+                         "top-left top-mid top-right"
+                         "mid-left mid-mid mid-right"
+                         "bot-left bot-mid bot-right"
+    
 }
 
 .top-left {
-
+    grid-area: top-left;
+    object-fit: cover;
+    text-align: center;
+    border: black solid
 }
 
 .top-mid{
-
+    
+    border: black solid;
+    grid-area: top-mid;
 }
 
 .top-right {
-
+    
+    border: black solid;
+    grid-area: top-right;
 }
 
 .mid-left {
-
+    display: grid;
+    border: black solid;
+    grid-area: mid-left;
 }
 
 .mid-mid {
-
+    display: grid;
+    border: black solid;
+    grid-area: mid-mid;
 }
 
 .mid-right {
-
+    display: grid;
+    border: black solid;
+    grid-area: mid-right;
 }
 
 .bot-left {
-
+    display: grid;
+    border: black solid;
+    grid-area: bot-left;
 }
 
 .bot-mid {
-
+    display: grid;
+    border: black solid;
+    grid-area: bot-mid;
 }
 
 .bot-right {
-
-
+    display: grid;
+    border: black solid;
+    grid-area: bot-right;
 }
