@@ -1,5 +1,9 @@
 body {
-    background-color: #a6dcef;
+    background-color: #dbc6eb;
+    margin: 0;
+    display: grid;
+    justify-content: center;
+    align-items: center;
 }
 
 .game-logo {
@@ -7,13 +11,12 @@ body {
 }
 
 .parent-grid {
-    display: grid;
-    margin-left: 51vh;
+    display: grid;;
     border: #ffe0ac 5rem;
     grid-row-gap: 1vh;
     grid-column-gap: 1vh;
-    grid-template-columns: 25vh 25vh 25vh;
-    grid-template-rows: 25vh 25vh 25vh;
+    grid-template-columns: 256px 256px 256px;
+    grid-template-rows: 256px 256px 256px;
 }
 
 .top-left {
@@ -24,6 +27,8 @@ body {
     border: black solid;
     object-fit: cover;
     text-align: center;
+    width: 100%;
+    height: 100%;
 }
 
 .top-mid {
@@ -34,6 +39,8 @@ body {
     grid-row-end: 2;
     object-fit: cover;
     text-align: center;
+    width: 100%;
+    height: 100%;
 }
 
 .top-right {
@@ -44,6 +51,8 @@ body {
     grid-row-end: 2;
     object-fit: cover;
     text-align: center;
+    width: 100%;
+    height: 100%;
 }
 
 .mid-left {
@@ -54,6 +63,8 @@ body {
     grid-row-end: 3;
     object-fit: cover;
     text-align: center;
+    width: 100%;
+    height: 100%;
 }
 
 .mid-mid {
@@ -64,6 +75,8 @@ body {
     grid-row-end: 3;
     object-fit: cover;
     text-align: center;
+    width: 100%;
+    height: 100%;
 }
 
 .mid-right {
@@ -74,6 +87,8 @@ body {
     grid-row-end: 3;
     object-fit: cover;
     text-align: center;
+    width: 100%;
+    height: 100%;
 }
 
 .bot-left {
@@ -84,6 +99,8 @@ body {
     grid-row-end: 4;
     object-fit: cover;
     text-align: center;
+    width: 100%;
+    height: 100%;
 }
 
 .bot-mid {
@@ -94,6 +111,8 @@ body {
     grid-row-end: 4;
     object-fit: cover;
     text-align: center;
+    width: 100%;
+    height: 100%;
 }
 
 .bot-right {
@@ -104,4 +123,36 @@ body {
     grid-row-end: 4;
     object-fit: cover;
     text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.buttons {
+    padding-top: 5vh;
+    display: flex;
+    justify-content: center;
+}
+
+.sun {
+    text-align: center;
+    cursor: pointer;
+    padding: 1vh;
+    margin-right: 2vh;
+    border-radius: 5%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    background-color: white;
+    box-shadow: 5px 10px springgreen;
+}
+
+
+.rain {
+    text-align: center;
+    cursor: pointer;
+    padding: 1vh;
+    border-radius: 5%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    background-color: white;
+    box-shadow: 5px 10px springgreen;
 }
