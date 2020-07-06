@@ -120,9 +120,9 @@ let topRowCheck = (array) => {
 let midRowCheck = (array) => {
     for (let i = 0; i < 3; i++) {
         if (arrayChecker(array[i].midRow, winArray_Sun)) {
-            alert("Sun Player wins!!");
+            return alert("Sun Player wins!!");
         } else if (arrayChecker(array[i].midRow, winArray_Cloud)) {
-            alert("Cloud player wins!!");
+            return alert("Cloud player wins!!");
         }
     }
 
@@ -131,9 +131,9 @@ let midRowCheck = (array) => {
 let botRowCheck = (array) => {
     for (let i = 0; i < 3; i++) {
         if (arrayChecker(array[i].botRow, winArray_Sun)) {
-            alert("Sun Player wins!!");
+            return alert("Sun Player wins!!");
         } else if (arrayChecker(array[i].botRow, winArray_Cloud)) {
-            alert("Cloud player wins!!");
+            return alert("Cloud player wins!!");
         }
     }
 
@@ -142,9 +142,9 @@ let botRowCheck = (array) => {
 let ColumnCheck = (array) => {
     for (let i = 0; i < 3; i++) {
         if (arrayChecker([array[0].topRow[i], array[1].midRow[i], array[2].botRow[i]], winArray_Sun)) {
-            alert("Sun Player wins!!");
+            return alert("Sun Player wins!!");
         } else if (arrayChecker([array[0].topRow[i], array[1].midRow[i], array[2].botRow[i]], winArray_Sun)) {
-            alert("Cloud player wins!!");
+            return alert("Cloud player wins!!");
         }
     }
 
