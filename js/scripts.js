@@ -256,7 +256,7 @@ botMid.onclick = () => {
     } else if (playerCloud === true && botMidClicked === true) {
         botMidImage.src = playerCloudImage;
         playerSun = true;
-        gameBoard[2].botRow[1] = 2;
+        gameBoard[2].botRow[1] = 2; // Moon Value
     }
     botMidClicked = false;
 }
@@ -270,7 +270,7 @@ botRight.onclick = () => {
     } else if (playerCloud === true && botRightClicked === true) {
         botRightImage.src = playerCloudImage;
         playerSun = true;
-        gameBoard[2].botRow[2] = 2;
+        gameBoard[2].botRow[2] = 2; // Moon Value
     }
     botRightClicked = false;
 }
