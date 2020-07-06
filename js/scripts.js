@@ -175,7 +175,7 @@ topMid.onclick = () => {
     } else if (playerCloud === true && topMidClicked === true) {
         topMidImage.src = playerCloudImage;
         playerSun = true;
-        gameBoard[0].topRow[1] = 2;
+        gameBoard[0].topRow[1] = 2; // Moon Value
     }
     topMidClicked = false;
 }
@@ -188,7 +188,7 @@ topRight.onclick = () => {
     } else if (playerCloud === true && topRightClicked === true) {
         topRightImage.src = playerCloudImage;
         playerSun = true;
-        gameBoard[0].topRow[2] = 2;
+        gameBoard[0].topRow[2] = 2; // Moon Value
     }
     topRightClicked = false;
 }
@@ -201,7 +201,7 @@ midLeft.onclick = () => {
     } else if (playerCloud === true && midLeftClicked === true) {
         midLeftImage.src = playerCloudImage;
         playerSun = true;
-        gameBoard[1].midRow[0] = 2;
+        gameBoard[1].midRow[0] = 2; // Moon Value
     }
     midLeftClicked = false;
 }
@@ -214,7 +214,7 @@ midMid.onclick = () => {
     } else if (playerCloud === true && midMidClicked === true) {
         midMidImage.src = playerCloudImage;
         playerSun = true;
-        gameBoard[1].midRow[1] = 2;
+        gameBoard[1].midRow[1] = 2; // Moon Value
     }
     midMidClicked = false;
 }
@@ -228,7 +228,7 @@ midRight.onclick = () => {
     } else if (playerCloud === true && midRightClicked === true) {
         midRightImage.src = playerCloudImage;
         playerSun = true;
-        gameBoard[1].midRow[2] = 2;
+        gameBoard[1].midRow[2] = 2; // Moon Value
     }
     midRightClicked = false;
 }
@@ -242,7 +242,7 @@ botLeft.onclick = () => {
     } else if (playerCloud === true && botLeftClicked === true) {
         botLeftImage.src = playerCloudImage;
         playerSun = true;
-        gameBoard[2].botRow[0] = 2;
+        gameBoard[2].botRow[0] = 2; // Moon Value
     }
     botLeftClicked = false;
 }
