@@ -42,16 +42,6 @@ let botLeftClicked = true;
 let botMidClicked = true;
 let botRightClicked = true;
 
-// let topLeftCellVal = 0;
-// let topMidCellVal = 0;
-// let topRightCellVal = 0;
-// let midLeftCellVal = 0;
-// let midMidCellVal = 0;
-// let midRightCellVal = 0;
-// let botLeftCellVal = 0;
-// let botMidCellVal = 0;
-// let botRightCellVal = 0;
-
 
 // SOURCE: https://stackoverflow.com/questions/3115982/how-to-check-if-two-arrays-are-equal-with-javascript
 // This is a snippet I borrowed from and modified to help check game win conditions.
@@ -86,33 +76,34 @@ const winArray_Cloud = [2, 2, 2]
 
 
 let endOfGameCheck = () => {
-        leftDiagonalCheck()
-        rightDiagonalCheck()
+        leftDiagonalCheck(gameBoard)
+        rightDiagonalCheck(gameBoard)
         topRowCheck(gameBoard)
         midRowCheck(gameBoard)
         botRowCheck(gameBoard)
         ColumnCheck(gameBoard)
 }
 
-let leftDiagonalCheck = () => {
-    if (arrayChecker([gameBoard[0][0], gameBoard[1][1], gameBoard[2][2]], winArray_Sun)) {
+let leftDiagonalCheck = (array) => {
+    if (arrayChecker([array[0].topRow[0], array[1].midRow[1], array[2].botRow[2]], winArray_Sun)) {
         alert("Sun player wins!")
         endOfGame = true;
-    } else if (arrayChecker([gameBoard[0][0], gameBoard[1][1], gameBoard[2][2]], winArray_Cloud)) {
+    } else if (arrayChecker([array[0].topRow[0], array[1].midRow[1], array[2].botRow[2]], winArray_Cloud)) {
         alert("Cloud player wins!")
         endOfGame = true;
     }
 }
 
-let rightDiagonalCheck = () => {
-    if (arrayChecker([gameBoard[2][0], gameBoard[1][1], gameBoard[0][2]], winArray_Sun)) {
+let rightDiagonalCheck = (array) => {
+    if (arrayChecker([array[2].botRow[0], array[1].midRow[1], array[0].topRow[2]], winArray_Sun)) {
         alert("Sun player wins!")
         endOfGame = true;
-    } else if (arrayChecker([gameBoard[2][0], gameBoard[1][1], gameBoard[0][2]], winArray_Cloud)) {
+    } else if (arrayChecker([array[2].botRow[0], array[1].midRow[1], array[0].topRow[2]], winArray_Cloud)) {
         alert("Cloud player wins!")
         endOfGame = true;
     }
 }
+//(arrayChecker([array[0].topRow[i], array[1].midRow[i], array[2].botRow[i]], winArray_Sun))
 
 
 let topRowCheck = (array) => {
@@ -149,10 +140,10 @@ let botRowCheck = (array) => {
 }
 
 let ColumnCheck = (array) => {
-    for (let i = 0; i < array[0].length; i++) {
-        if (arrayChecker(array[0].topRow[i], array[1].midRow[i], array[2].botRow[i], winArray_Sun)) {
+    for (let i = 0; i < 3; i++) {
+        if (arrayChecker([array[0].topRow[i], array[1].midRow[i], array[2].botRow[i]], winArray_Sun)) {
             alert("Sun Player wins!!");
-        } else if (arrayChecker(array[0], winArray_Cloud)) {
+        } else if (arrayChecker([array[0].topRow[i], array[1].midRow[i], array[2].botRow[i]], winArray_Sun)) {
             alert("Cloud player wins!!");
         }
     }
