@@ -12,3 +12,5 @@ Choose which character you would like to play as. You can play as a sun or a clo
 ## Motivation
 
 ## Technologies Used
+
+## Challenges
