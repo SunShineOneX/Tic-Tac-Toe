@@ -4,3 +4,5 @@ https://sunshineonex.github.io/Tic-Tac-Toe/
 A high-stakes, adrenaline-inducing take on the classic game of tic-tac-toe.
 
 ## How to play
+
+Choose which character you would like to play as. You can play as a sun or a cloud. 
