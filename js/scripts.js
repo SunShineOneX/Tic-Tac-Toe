@@ -53,6 +53,7 @@ let botRightClicked = true;
 
 
 // SOURCE: https://stackoverflow.com/questions/3115982/how-to-check-if-two-arrays-are-equal-with-javascript
+// This is a snippet I borrowed from and modified to help check game win conditions.
 let arrayChecker = (x, y) => {
     if (x === y) return true;
     if (x == null || y == null) return false;
