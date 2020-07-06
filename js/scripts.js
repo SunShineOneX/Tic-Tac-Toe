@@ -148,19 +148,20 @@ cloudButton.addEventListener("click", function (event) {
 
 })
 
-// On-click functions for every single game board box that identifies the players box by image
+// On-click functions for every single game board box that identifies the current players box by image
 // Also logs a number relative to that particular player to help determine win conditions.
+// Sun player = 1 and Cloud player = 2
 topLeft.onclick = () => {
     if (playerSun === true && topLeftClicked === true) {
         topLeftImage.src = playerSunImage;
         playerSun = false;
         playerCloud = true;
-        gameBoard[0].topRow[0] = 1;
+        gameBoard[0].topRow[0] = 1; // Sun Value
 
     } else if (playerCloud === true && topLeftClicked === true) {
         topLeftImage.src = playerCloudImage;
         playerSun = true;
-        gameBoard[0].topRow[0] = 2;
+        gameBoard[0].topRow[0] = 2; // Cloud Value
     }
     topLeftClicked = false;
 }
