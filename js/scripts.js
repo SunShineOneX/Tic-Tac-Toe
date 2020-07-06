@@ -92,7 +92,7 @@ let topRowCheck = (array) => {
 
 let midRowCheck = (array) => {
     for (let i = 0; i < array[1].length; i++) {
-        if (arrayChecker(array[i].midRow, winArray_Sun)) {
+        if (arrayChecker(array[i].midRow, winArray_Sun)) { // if (arrayChecker(array[1].midRow[i], winArray_Sun)) Is this how it should be?
             alert("Sun Player wins!!");
         } else if (arrayChecker(array[i].midRow, winArray_Cloud)) {
             alert("Cloud player wins!!");
@@ -123,6 +123,7 @@ let ColumnCheck = (array) => {
 
 }
 
+// An event listener that identifies the order in which the players takes turns. 
 sunButton.addEventListener("click", function (event) {
     console.log(gameBoard)
     playerTurn = 1;
@@ -134,7 +135,7 @@ sunButton.addEventListener("click", function (event) {
     }
 
 })
-
+// An event listener that identifies the order in which the players takes turns. 
 cloudButton.addEventListener("click", function (event) {
 
     playerTurn = 1;
@@ -147,6 +148,8 @@ cloudButton.addEventListener("click", function (event) {
 
 })
 
+// On-click functions for every single game board box that identifies the players box by image
+// Also logs a number relative to that particular player to help determine win conditions.
 topLeft.onclick = () => {
     if (playerSun === true && topLeftClicked === true) {
         topLeftImage.src = playerSunImage;
