@@ -1,12 +1,10 @@
 // Global Variables
-
 let playerSun = false;
 let playerCloud = false;
 let playerCloudImage = "./assets/rain.png";
 let playerSunImage = "./assets/sun.png";
 
 // Tic-Tac-Toe grid individual box selectors
-
 let topLeft = document.getElementById("top-left");
 let topMid = document.getElementById("top-mid");
 let topRight = document.getElementById("top-right");
@@ -16,8 +14,8 @@ let midRight = document.getElementById("mid-right");
 let botLeft = document.getElementById("bot-left");
 let botMid = document.getElementById("bot-mid");
 let botRight = document.getElementById("bot-right");
-//Tic-Tac-Toe grid individual image selectors
 
+//Tic-Tac-Toe grid individual image selectors
 let topLeftImage = document.getElementById("topLeftImage");
 let topMidImage = document.getElementById("topMidImage");
 let topRightImage = document.getElementById("topRightImage");
@@ -28,6 +26,7 @@ let botLeftImage = document.getElementById("botLeftImage");
 let botMidImage = document.getElementById("botMidImage");
 let botRightImage = document.getElementById("botRightImage");
 
+// Sun and Cloud player button selectors
 let sunButton = document.getElementById("sun");
 let cloudButton = document.getElementById("rain");
 
