@@ -1,3 +1,5 @@
+// Global Variables
+
 let playerSun = false;
 let playerCloud = false;
 let playerCloudImage = "./assets/rain.png";
@@ -114,9 +116,6 @@ let ColumnCheck = (array) => {
             alert("Cloud player wins!!");
         }
     }
-
-}
-let sunCloudSwap = () => {
 
 }
 
