@@ -153,13 +153,13 @@ cloudButton.addEventListener("click", function (event) {
 // Sun player = 1 and Cloud player = 2
 topLeft.onclick = () => {
     if (playerSun === true && topLeftClicked === true) {
-        topLeftImage.src = playerSunImage;
+        topLeftImage.src = playerSunImage; // Changes the image to sun
         playerSun = false;
         playerCloud = true;
         gameBoard[0].topRow[0] = 1; // Sun Value
 
     } else if (playerCloud === true && topLeftClicked === true) {
-        topLeftImage.src = playerCloudImage;
+        topLeftImage.src = playerCloudImage; // Changes the image cloud
         playerSun = true;
         gameBoard[0].topRow[0] = 2; // Cloud Value
     }
@@ -168,7 +168,7 @@ topLeft.onclick = () => {
 
 topMid.onclick = () => {
     if (playerSun === true && topMidClicked === true) {
-        topMidImage.src = playerSunImage;
+        topMidImage.src = playerSunImage; // Changes the image to sun
         playerSun = false;
         playerCloud = true;
         gameBoard[0].topRow[1] = 1; // Sun Value
@@ -181,7 +181,7 @@ topMid.onclick = () => {
 }
 topRight.onclick = () => {
     if (playerSun === true && topRightClicked === true) {
-        topRightImage.src = playerSunImage;
+        topRightImage.src = playerSunImage; // Changes the image to sun
         playerSun = false;
         playerCloud = true;
         gameBoard[0].topRow[2] = 1; // Sun Value
@@ -194,7 +194,7 @@ topRight.onclick = () => {
 }
 midLeft.onclick = () => {
     if (playerSun === true && midLeftClicked === true) {
-        midLeftImage.src = playerSunImage;
+        midLeftImage.src = playerSunImage; // Changes the image to sun
         playerSun = false;
         playerCloud = true;
         gameBoard[1].midRow[0] = 1; // Sun Value
@@ -207,7 +207,7 @@ midLeft.onclick = () => {
 }
 midMid.onclick = () => {
     if (playerSun === true && midMidClicked === true) {
-        midMidImage.src = playerSunImage;
+        midMidImage.src = playerSunImage; // Changes the image to sun
         playerSun = false;
         playerCloud = true;
         gameBoard[1].midRow[1] = 1; // Sun Value
@@ -221,7 +221,7 @@ midMid.onclick = () => {
 midRight.onclick = () => {
 
     if (playerSun === true && midRightClicked === true) {
-        midRightImage.src = playerSunImage;
+        midRightImage.src = playerSunImage; // Changes the image to sun
         playerSun = false;
         playerCloud = true;
         gameBoard[1].midRow[2] = 1; // Sun Value
@@ -235,7 +235,7 @@ midRight.onclick = () => {
 botLeft.onclick = () => {
 
     if (playerSun === true && botLeftClicked === true) {
-        botLeftImage.src = playerSunImage;
+        botLeftImage.src = playerSunImage; // Changes the image to sun
         playerSun = false;
         playerCloud = true;
         gameBoard[2].botRow[0] = 1; // Sun Value
@@ -249,7 +249,7 @@ botLeft.onclick = () => {
 botMid.onclick = () => {
 
     if (playerSun === true && botMidClicked === true) {
-        botMidImage.src = playerSunImage;
+        botMidImage.src = playerSunImage; // Changes the image to sun
         playerSun = false;
         playerCloud = true;
         gameBoard[2].botRow[1] = 1; // Sun Value
@@ -263,7 +263,7 @@ botMid.onclick = () => {
 botRight.onclick = () => {
 
     if (playerSun === true && botRightClicked === true) {
-        botRightImage.src = playerSunImage;
+        botRightImage.src = playerSunImage; // Changes the image to sun
         playerSun = false;
         playerCloud = true;
         gameBoard[2].botRow[2] = 1; // Sun Value
