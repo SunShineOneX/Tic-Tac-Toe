@@ -80,9 +80,16 @@ const winArray_Sun = [1, 1, 1]
 const winArray_Cloud = [2, 2, 2]
 
 //Diagonal Checks
-// ===============
-let diagonalCheck = () => {
+// ========================================
+// Left to right diagonal check
 
+let diagonalCheck = () => {
+    if (arrayChecker([gameBoard[0][0], gameBoard[1][1], gameBoard[2][2]], winArray_Sun)) {
+        alert("Sun player wins!")
+        endOfGame = true;
+    } else if (arrayChecker([gameBoard[0][0], gameBoard[1][1], gameBoard[2][2]], winArray_Cloud)) {
+        alert("Cloud player wins!")
+    }
 }
 
 let topRowCheck = (array) => {
