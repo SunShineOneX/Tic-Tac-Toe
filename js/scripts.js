@@ -3,6 +3,7 @@ let playerSun = false;
 let playerCloud = false;
 let playerCloudImage = "./assets/rain.png";
 let playerSunImage = "./assets/sun.png";
+let endOfGame = false;
 
 // Tic-Tac-Toe grid individual box selectors
 let topLeft = document.getElementById("top-left");
@@ -59,7 +60,7 @@ let arrayChecker = (x, y) => {
     if (x == null || y == null) return false;
     if (x.length !== y.length) return false;
 
-    for (var i = 0; i < a.length; ++i) {
+    for (var i = 0; i < x.length; ++i) {
         if (x[i] !== y[i]) return false;
     }
     return true;
@@ -83,29 +84,51 @@ const winArray_Cloud = [2, 2, 2]
 // ========================================
 // Left to right diagonal check
 
-let diagonalCheck = () => {
+
+let endOfGameCheck = () => {
+        leftDiagonalCheck()
+        rightDiagonalCheck()
+        topRowCheck(gameBoard)
+        midRowCheck(gameBoard)
+        botRowCheck(gameBoard)
+        ColumnCheck(gameBoard)
+}
+
+let leftDiagonalCheck = () => {
     if (arrayChecker([gameBoard[0][0], gameBoard[1][1], gameBoard[2][2]], winArray_Sun)) {
         alert("Sun player wins!")
         endOfGame = true;
     } else if (arrayChecker([gameBoard[0][0], gameBoard[1][1], gameBoard[2][2]], winArray_Cloud)) {
         alert("Cloud player wins!")
+        endOfGame = true;
     }
 }
 
+let rightDiagonalCheck = () => {
+    if (arrayChecker([gameBoard[2][0], gameBoard[1][1], gameBoard[0][2]], winArray_Sun)) {
+        alert("Sun player wins!")
+        endOfGame = true;
+    } else if (arrayChecker([gameBoard[2][0], gameBoard[1][1], gameBoard[0][2]], winArray_Cloud)) {
+        alert("Cloud player wins!")
+        endOfGame = true;
+    }
+}
+
+
 let topRowCheck = (array) => {
-    for (let i = 0; i < array[0].length; i++) {
+    for (let i = 0; i < 3; i++) {
         if (arrayChecker(array[i].topRow, winArray_Sun)) {
-            alert("Sun Player wins!!");
+           return alert("Sun Player wins!!");
         } else if (arrayChecker(array[i].topRow, winArray_Cloud)) {
-            alert("Cloud player wins!!");
+           return alert("Cloud player wins!!");
         }
     }
 
 }
 
 let midRowCheck = (array) => {
-    for (let i = 0; i < array[1].length; i++) {
-        if (arrayChecker(array[i].midRow, winArray_Sun)) { // if (arrayChecker(array[1].midRow[i], winArray_Sun)) Is this how it should be?
+    for (let i = 0; i < 3; i++) {
+        if (arrayChecker(array[i].midRow, winArray_Sun)) {
             alert("Sun Player wins!!");
         } else if (arrayChecker(array[i].midRow, winArray_Cloud)) {
             alert("Cloud player wins!!");
@@ -115,7 +138,7 @@ let midRowCheck = (array) => {
 }
 
 let botRowCheck = (array) => {
-    for (let i = 0; i < array[2].length; i++) {
+    for (let i = 0; i < 3; i++) {
         if (arrayChecker(array[i].botRow, winArray_Sun)) {
             alert("Sun Player wins!!");
         } else if (arrayChecker(array[i].botRow, winArray_Cloud)) {
@@ -129,7 +152,7 @@ let ColumnCheck = (array) => {
     for (let i = 0; i < array[0].length; i++) {
         if (arrayChecker(array[0].topRow[i], array[1].midRow[i], array[2].botRow[i], winArray_Sun)) {
             alert("Sun Player wins!!");
-        } else if (arrayChecker(array[0].topRow, winArray_Cloud)) {
+        } else if (arrayChecker(array[0], winArray_Cloud)) {
             alert("Cloud player wins!!");
         }
     }
@@ -175,8 +198,9 @@ topLeft.onclick = () => {
         topLeftImage.src = playerCloudImage; // Changes the image to cloud
         playerSun = true;
         gameBoard[0].topRow[0] = 2; // Cloud Value
-    }
+    } 
     topLeftClicked = false;
+    endOfGameCheck();
 }
 
 topMid.onclick = () => {
@@ -191,6 +215,7 @@ topMid.onclick = () => {
         gameBoard[0].topRow[1] = 2; // Moon Value
     }
     topMidClicked = false;
+    endOfGameCheck();
 }
 topRight.onclick = () => {
     if (playerSun === true && topRightClicked === true) {
@@ -204,6 +229,7 @@ topRight.onclick = () => {
         gameBoard[0].topRow[2] = 2; // Moon Value
     }
     topRightClicked = false;
+    endOfGameCheck();
 }
 midLeft.onclick = () => {
     if (playerSun === true && midLeftClicked === true) {
@@ -217,6 +243,7 @@ midLeft.onclick = () => {
         gameBoard[1].midRow[0] = 2; // Moon Value
     }
     midLeftClicked = false;
+    endOfGameCheck();
 }
 midMid.onclick = () => {
     if (playerSun === true && midMidClicked === true) {
@@ -230,6 +257,7 @@ midMid.onclick = () => {
         gameBoard[1].midRow[1] = 2; // Moon Value
     }
     midMidClicked = false;
+    endOfGameCheck();
 }
 midRight.onclick = () => {
 
@@ -244,6 +272,7 @@ midRight.onclick = () => {
         gameBoard[1].midRow[2] = 2; // Moon Value
     }
     midRightClicked = false;
+    endOfGameCheck();
 }
 botLeft.onclick = () => {
 
@@ -258,6 +287,7 @@ botLeft.onclick = () => {
         gameBoard[2].botRow[0] = 2; // Moon Value
     }
     botLeftClicked = false;
+    endOfGameCheck();
 }
 botMid.onclick = () => {
 
@@ -272,6 +302,7 @@ botMid.onclick = () => {
         gameBoard[2].botRow[1] = 2; // Moon Value
     }
     botMidClicked = false;
+    endOfGameCheck();
 }
 botRight.onclick = () => {
 
@@ -286,4 +317,5 @@ botRight.onclick = () => {
         gameBoard[2].botRow[2] = 2; // Moon Value
     }
     botRightClicked = false;
+    endOfGameCheck();
 }
