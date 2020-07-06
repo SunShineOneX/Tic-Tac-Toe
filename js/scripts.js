@@ -74,6 +74,27 @@ const winArray_Cloud = [2, 2, 2]
 // ========================================
 // Left to right diagonal check
 
+let newGame = () => {
+    gameBoard = [{
+        topRow: [0, 0, 0]
+    },
+    {
+        midRow: [0, 0, 0]
+    },
+    {
+        botRow: [0, 0, 0]
+    }
+]
+topLeftImage.src = "";
+topMidImage.src = "";
+topRightImage.src = "";
+midLeftImage.src = "";
+midMidImage.src = "";
+midRightImage.src = "";
+botLeftImage.src = "";
+botMidImage.src = "";
+botRightImage.src = "";
+}
 
 let endOfGameCheck = () => {
     leftDiagonalCheck(gameBoard)
@@ -143,7 +164,7 @@ let ColumnCheck = (array) => {
     for (let i = 0; i < 3; i++) {
         if (arrayChecker([array[0].topRow[i], array[1].midRow[i], array[2].botRow[i]], winArray_Sun)) {
             return alert("Sun Player wins!!");
-        } else if (arrayChecker([array[0].topRow[i], array[1].midRow[i], array[2].botRow[i]], winArray_Sun)) {
+        } else if (arrayChecker([array[0].topRow[i], array[1].midRow[i], array[2].botRow[i]], winArray_Cloud)) {
             return alert("Cloud player wins!!");
         }
     }
