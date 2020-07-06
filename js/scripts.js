@@ -30,6 +30,7 @@ let botRightImage = document.getElementById("botRightImage");
 let sunButton = document.getElementById("sun");
 let cloudButton = document.getElementById("rain");
 
+// Variables that are used in functions to only let me click each individual grid box one time
 let topLeftClicked = true;
 let topMidClicked = true;
 let topRightClicked = true;
@@ -155,7 +156,6 @@ topLeft.onclick = () => {
     } else if (playerCloud === true && topLeftClicked === true) {
         topLeftImage.src = playerCloudImage;
         playerSun = true;
-        topLeftCellVal = 2;
         gameBoard[0].topRow[0] = 2;
     }
     topLeftClicked = false;
