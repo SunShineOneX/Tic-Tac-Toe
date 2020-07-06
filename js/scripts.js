@@ -15,7 +15,7 @@ let botLeft = document.getElementById("bot-left");
 let botMid = document.getElementById("bot-mid");
 let botRight = document.getElementById("bot-right");
 
-//Tic-Tac-Toe grid individual image selectors
+//Tic-Tac-Toe grid individual image ID selectors
 let topLeftImage = document.getElementById("topLeftImage");
 let topMidImage = document.getElementById("topMidImage");
 let topRightImage = document.getElementById("topRightImage");
@@ -78,6 +78,12 @@ const gameBoard = [{
 
 const winArray_Sun = [1, 1, 1]
 const winArray_Cloud = [2, 2, 2]
+
+//Diagonal Checks
+// ===============
+let diagonalCheck = () => {
+
+}
 
 let topRowCheck = (array) => {
     for (let i = 0; i < array[0].length; i++) {
@@ -154,7 +160,7 @@ cloudButton.addEventListener("click", function (event) {
 topLeft.onclick = () => {
     if (playerSun === true && topLeftClicked === true) {
         topLeftImage.src = playerSunImage; // Changes the image to sun
-        playerSun = false;
+        playerSun = false; // Changes the playerSun value to false 
         playerCloud = true;
         gameBoard[0].topRow[0] = 1; // Sun Value
 
