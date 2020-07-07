@@ -10,7 +10,7 @@ body {
     text-align: center;
     font-family: 'Montserrat', sans-serif;
 }
-
+/* Main game board grid*/
 .parent-grid {
     display: grid;;
     border: #ffe0ac 5rem;
@@ -20,6 +20,7 @@ body {
     grid-template-rows: 256px 256px 256px;
 }
 
+/* Individual board grids */
 .top-left {
     grid-column-start: 1;
     grid-column-end: 2;
