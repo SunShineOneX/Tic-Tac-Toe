@@ -15,8 +15,10 @@ Choose which character you would like to play as. You can play as a sun or a clo
 - PerScholas
 
 ## Technologies Used
-
+- CSS, Javascript
 
 ## Challenges
+- 
 
 ## Credits
+-Jeffrey Rockenbach 
