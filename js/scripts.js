@@ -68,8 +68,8 @@ let gameBoard = [{
     }
 ]
 
-const winArray_Sun = [1, 1, 1]
-const winArray_Cloud = [2, 2, 2]
+const winArray_Sun = [1, 1, 1] // Winning condition for Sun Player
+const winArray_Cloud = [2, 2, 2] // Winning condition for Cloud player
 
 // This function runs all of the win condition checks and is used after every single div box is clicked to check for a winner.
 let endOfGameCheck = () => {
