@@ -8,6 +8,7 @@ body {
 
 .game-logo {
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .parent-grid {
@@ -144,7 +145,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     background-color: white;
-    box-shadow: 5px 10px darkgray;
+    box-shadow: 5px 10px #393e46;
 }
 
 
@@ -156,5 +157,17 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     background-color: white;
-    box-shadow: 5px 10px darkgray;
+    box-shadow: 5px 10px #393e46;
+}
+
+.reset {
+    text-align: center;
+    cursor: pointer;
+    padding: 1vh;
+    margin-left: 2vh;
+    border-radius: 5%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    background-color: white;
+    box-shadow: 5px 10px #393e46;
 }

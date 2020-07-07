@@ -71,7 +71,7 @@ let gameBoard = [{
 const winArray_Sun = [1, 1, 1]
 const winArray_Cloud = [2, 2, 2]
 
-
+// This function runs all of the win condition checks and is used after every single div box is clicked to check for a winner.
 let endOfGameCheck = () => {
     leftDiagonalCheck(gameBoard)
     rightDiagonalCheck(gameBoard)
@@ -102,8 +102,7 @@ let rightDiagonalCheck = (array) => {
     }
 }
 
-
-
+// Top row game win check
 let topRowCheck = (array) => {
     for (let i = 0; i < 3; i++) {
         if (arrayChecker(array[i].topRow, winArray_Sun)) {
@@ -115,6 +114,8 @@ let topRowCheck = (array) => {
 
 }
 
+
+// Mid row game win check
 let midRowCheck = (array) => {
     for (let i = 0; i < 3; i++) {
         if (arrayChecker(array[i].midRow, winArray_Sun)) {
@@ -126,6 +127,7 @@ let midRowCheck = (array) => {
 
 }
 
+// Bot row game win check
 let botRowCheck = (array) => {
     for (let i = 0; i < 3; i++) {
         if (arrayChecker(array[i].botRow, winArray_Sun)) {
@@ -136,7 +138,7 @@ let botRowCheck = (array) => {
     }
 
 }
-
+// Column row game win check
 let ColumnCheck = (array) => {
     for (let i = 0; i < 3; i++) {
         if (arrayChecker([array[0].topRow[i], array[1].midRow[i], array[2].botRow[i]], winArray_Sun)) {
@@ -173,7 +175,7 @@ cloudButton.addEventListener("click", function (event) {
 
 })
 
-
+// An event listener that listens for the user to click the reset button to wipe the game board
 document.getElementById("reset").addEventListener("click", function () {
     newGame()
 });
@@ -314,6 +316,9 @@ botRight.onclick = () => {
     botRightClicked = false;
     return endOfGameCheck();
 }
+
+
+// New game function that resets all values
 
 let newGame = () => {
     gameBoard = [{
