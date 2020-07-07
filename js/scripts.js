@@ -71,10 +71,6 @@ let gameBoard = [{
 const winArray_Sun = [1, 1, 1]
 const winArray_Cloud = [2, 2, 2]
 
-//Diagonal Checks
-// ========================================
-// Left to right diagonal check
-
 
 let endOfGameCheck = () => {
     leftDiagonalCheck(gameBoard)
@@ -84,24 +80,25 @@ let endOfGameCheck = () => {
     botRowCheck(gameBoard)
     ColumnCheck(gameBoard)
 }
-
+//Diagonal Checks
+// ========================================
+// Left to right diagonal check
 let leftDiagonalCheck = (array) => {
     if (arrayChecker([array[0].topRow[0], array[1].midRow[1], array[2].botRow[2]], winArray_Sun)) {
         alert("Sun player wins!")
-        endOfGame = true;
     } else if (arrayChecker([array[0].topRow[0], array[1].midRow[1], array[2].botRow[2]], winArray_Cloud)) {
         alert("Cloud player wins!")
-        endOfGame = true;
     }
 }
 
+// Right to left diagonal check
 let rightDiagonalCheck = (array) => {
     if (arrayChecker([array[2].botRow[0], array[1].midRow[1], array[0].topRow[2]], winArray_Sun)) {
         alert("Sun player wins!")
         endOfGame = true;
     } else if (arrayChecker([array[2].botRow[0], array[1].midRow[1], array[0].topRow[2]], winArray_Cloud)) {
         alert("Cloud player wins!")
-        endOfGame = true;
+
     }
 }
 
