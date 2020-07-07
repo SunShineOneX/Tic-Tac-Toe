@@ -21,4 +21,4 @@ Choose which character you would like to play as. You can play as a sun or a clo
 - Checking for row, column, and diagonal win conditions
 
 ## Credits
--Jeffrey Rockenbach https://sunshineonex.github.io
+-Jeffrey Rockenbach https://github.com/SunShineOneX
