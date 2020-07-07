@@ -30,6 +30,7 @@ let botRightImage = document.getElementById("botRightImage");
 // Sun and Cloud player button selectors
 let sunButton = document.getElementById("sun");
 let cloudButton = document.getElementById("rain");
+let resetButton = document.getElementById("reset");
 
 // Variables that are used in functions to only let me click each individual grid box one time
 let topLeftClicked = true;
@@ -56,7 +57,7 @@ let arrayChecker = (x, y) => {
     return true;
 }
 
-const gameBoard = [{
+let gameBoard = [{
         topRow: [0, 0, 0]
     },
     {
@@ -74,27 +75,6 @@ const winArray_Cloud = [2, 2, 2]
 // ========================================
 // Left to right diagonal check
 
-let newGame = () => {
-    gameBoard = [{
-        topRow: [0, 0, 0]
-    },
-    {
-        midRow: [0, 0, 0]
-    },
-    {
-        botRow: [0, 0, 0]
-    }
-]
-topLeftImage.src = "";
-topMidImage.src = "";
-topRightImage.src = "";
-midLeftImage.src = "";
-midMidImage.src = "";
-midRightImage.src = "";
-botLeftImage.src = "";
-botMidImage.src = "";
-botRightImage.src = "";
-}
 
 let endOfGameCheck = () => {
     leftDiagonalCheck(gameBoard)
@@ -124,7 +104,7 @@ let rightDiagonalCheck = (array) => {
         endOfGame = true;
     }
 }
-//(arrayChecker([array[0].topRow[i], array[1].midRow[i], array[2].botRow[i]], winArray_Sun))
+
 
 
 let topRowCheck = (array) => {
@@ -195,6 +175,12 @@ cloudButton.addEventListener("click", function (event) {
     }
 
 })
+
+
+document.getElementById("reset").addEventListener("click", function () {
+    newGame()
+});
+
 
 // On-click functions for every single game board box that identifies the current players box by image
 // Also logs a number relative to that particular player to help determine win conditions.
@@ -330,4 +316,35 @@ botRight.onclick = () => {
     }
     botRightClicked = false;
     return endOfGameCheck();
+}
+
+let newGame = () => {
+    gameBoard = [{
+            topRow: [0, 0, 0]
+        },
+        {
+            midRow: [0, 0, 0]
+        },
+        {
+            botRow: [0, 0, 0]
+        }
+    ]
+    topLeftImage.src = "";
+    topMidImage.src = "";
+    topRightImage.src = "";
+    midLeftImage.src = "";
+    midMidImage.src = "";
+    midRightImage.src = "";
+    botLeftImage.src = "";
+    botMidImage.src = "";
+    botRightImage.src = "";
+    topLeftClicked = true;
+    topMidClicked = true;
+    topRightClicked = true;
+    midLeftClicked = true;
+    midMidClicked = true;
+    midRightClicked = true;
+    botLeftClicked = true;
+    botMidClicked = true;
+    botRightClicked = true;
 }
