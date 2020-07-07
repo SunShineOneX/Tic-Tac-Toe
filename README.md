@@ -1,4 +1,5 @@
 # Tic-Tac-Toe
+![Project Showcase](https://github.com/SunShineOneX/Tic-Tac-Toe/blob/master/assets/project-showcase.png?raw=true)
 https://sunshineonex.github.io
 
 A high-stakes, adrenaline-inducing take on the classic game of tic-tac-toe.
