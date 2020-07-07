@@ -1,5 +1,5 @@
 # Tic-Tac-Toe
-https://sunshineonex.github.io/Tic-Tac-Toe/
+https://sunshineonex.github.io
 
 A high-stakes, adrenaline-inducing take on the classic game of tic-tac-toe.
 
@@ -18,7 +18,7 @@ Choose which character you would like to play as. You can play as a sun or a clo
 - CSS, Javascript
 
 ## Challenges
-- 
+- Checking for row, column, and diagonal win conditions
 
 ## Credits
--Jeffrey Rockenbach 
+-Jeffrey Rockenbach https://sunshineonex.github.io
