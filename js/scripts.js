@@ -46,17 +46,17 @@ let botRightClicked = true;
 
 // SOURCE: https://stackoverflow.com/questions/3115982/how-to-check-if-two-arrays-are-equal-with-javascript
 // This is a snippet I borrowed from and modified to help check game win conditions.
-let arrayChecker = (x, y) => {
-    if (x === y) return true;
+let arrayChecker = (x, y) => { // If the arrays are strictly equal to each other then return true. if thats not true it checks if both are equal to null
+    if (x === y) return true; // You can't compare null to another array
     if (x == null || y == null) return false;
-    if (x.length !== y.length) return false;
+    if (x.length !== y.length) return false; // If they have different lengths then they can't be equal
 
-    for (var i = 0; i < x.length; ++i) {
+    for (var i = 0; i < x.length; ++i) { // Are each individual elements in both arrays equal to each other.
         if (x[i] !== y[i]) return false;
     }
     return true;
 }
-
+// Array of Objects with a single array inside. Each object has a single property of an array.
 let gameBoard = [{
         topRow: [0, 0, 0]
     },
@@ -318,7 +318,7 @@ botRight.onclick = () => {
 }
 
 
-// New game function that resets all values
+// New game function that resets all values for a brand new game.
 
 let newGame = () => {
     gameBoard = [{
