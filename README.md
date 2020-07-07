@@ -12,8 +12,10 @@ Choose which character you would like to play as. You can play as a sun or a clo
 - A soothing aesthetic
 
 ## Motivation
+- PerScholas
 
 ## Technologies Used
+
 
 ## Challenges
 
