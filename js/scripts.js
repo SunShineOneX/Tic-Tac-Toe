@@ -102,8 +102,14 @@ let sunWinAlert = () => {
 
 let cloudWinAlert = () => {
     setTimeout(function () {
-        alert("Sun player wins!");
+        alert("Cloud player wins!");
     }, 500);
+}
+
+let newGameDelay = () => {
+    setTimeout(function () {
+        newGame();
+    }, 1000)
 }
 
 //Diagonal Checks
@@ -111,19 +117,22 @@ let cloudWinAlert = () => {
 // Left to right diagonal check
 let leftDiagonalCheck = (array) => {
     if (arrayChecker([array[0].topRow[0], array[1].midRow[1], array[2].botRow[2]], winArray_Sun)) {
-        return sunWinAlert();
+        sunWinAlert();
+        newGameDelay();
     } else if (arrayChecker([array[0].topRow[0], array[1].midRow[1], array[2].botRow[2]], winArray_Cloud)) {
-        return cloudWinAlert();
+        cloudWinAlert();
+        newGameDelay();
     }
 }
 
 // Right to left diagonal check
 let rightDiagonalCheck = (array) => {
     if (arrayChecker([array[2].botRow[0], array[1].midRow[1], array[0].topRow[2]], winArray_Sun)) {
-        return sunWinAlert();
-        endOfGame = true;
+        sunWinAlert();
+        newGameDelay();
     } else if (arrayChecker([array[2].botRow[0], array[1].midRow[1], array[0].topRow[2]], winArray_Cloud)) {
-        return cloudWinAlert();
+        cloudWinAlert();
+        newGameDelay();
 
     }
 }
@@ -132,9 +141,11 @@ let rightDiagonalCheck = (array) => {
 let topRowCheck = (array) => {
     for (let i = 0; i < 3; i++) {
         if (arrayChecker(array[i].topRow, winArray_Sun)) {
-            return sunWinAlert();
+            sunWinAlert();
+            newGameDelay();
         } else if (arrayChecker(array[i].topRow, winArray_Cloud)) {
-            return cloudWinAlert();
+            cloudWinAlert();
+            newGameDelay();
         }
     }
 
@@ -146,8 +157,10 @@ let midRowCheck = (array) => {
     for (let i = 0; i < 3; i++) {
         if (arrayChecker(array[i].midRow, winArray_Sun)) {
             sunWinAlert();
+            newGameDelay();
         } else if (arrayChecker(array[i].midRow, winArray_Cloud)) {
-            return cloudWinAlert();
+            cloudWinAlert();
+            newGameDelay();
         }
     }
 
@@ -157,9 +170,11 @@ let midRowCheck = (array) => {
 let botRowCheck = (array) => {
     for (let i = 0; i < 3; i++) {
         if (arrayChecker(array[i].botRow, winArray_Sun)) {
-            return sunWinAlert();
+            sunWinAlert();
+            newGameDelay();
         } else if (arrayChecker(array[i].botRow, winArray_Cloud)) {
-            return cloudWinAlert();;
+            cloudWinAlert();
+            newGameDelay();
         }
     }
 
@@ -168,9 +183,11 @@ let botRowCheck = (array) => {
 let ColumnCheck = (array) => {
     for (let i = 0; i < 3; i++) {
         if (arrayChecker([array[0].topRow[i], array[1].midRow[i], array[2].botRow[i]], winArray_Sun)) {
-            return sunWinAlert();
+            sunWinAlert();
+            newGameDelay();
         } else if (arrayChecker([array[0].topRow[i], array[1].midRow[i], array[2].botRow[i]], winArray_Cloud)) {
-            return cloudWinAlert();
+            cloudWinAlert();
+            newGameDelay();
         }
     }
 

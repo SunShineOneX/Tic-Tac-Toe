@@ -6,17 +6,21 @@ body {
     align-items: center;
 }
 
+.container {
+
+}
+
 .game-logo {
     text-align: center;
     font-family: 'Montserrat', sans-serif;
 }
 /* Main game board grid*/
 .parent-grid {
-    display: grid;;
+    display: grid;
     border: #ffe0ac 5rem;
     grid-row-gap: 1vh;
     grid-column-gap: 1vh;
-    grid-template-columns: 256px 256px 256px;
+    grid-template-columns: 256px 266px 256px;
     grid-template-rows: 256px 256px 256px;
 }
 
@@ -128,6 +132,64 @@ body {
     width: 100%;
     height: 100%;
 }
+
+/* Image boxes */
+/* #topLeftImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+#topMidImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#topRightImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#midLeftImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#midMidImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#midRightImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#botLeftImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#botMidImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#botRightImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
+
+
 
 /* Buttons */
 
